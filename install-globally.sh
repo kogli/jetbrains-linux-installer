@@ -9,3 +9,5 @@ fi
 $($SUDO cp $source $dest)
 $($SUDO chmod +x $dest)
 $($SUDO chown root:root $dest)
+
+echo "jetbrains-get installed"

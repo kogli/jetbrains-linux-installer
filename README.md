@@ -14,15 +14,15 @@ $ jetbrains-get --help
 Usage:
 	jetbrains-get install [packages] [options]	Installs/upgrades packages
 	jetbrains-get upgrade [packages] [options]	Installs/upgrades packages
-	jetbrains-get remove [packages]			Uninstalls packages
-	jetbrains-get clean				Removes all downloaded files
-	jetbrains-get --help				Prints this help message and quits
+	jetbrains-get remove [packages]				Uninstalls packages
+	jetbrains-get clean							Removes all downloaded files
+	jetbrains-get --help						Prints this help message and quits
 
 Packages:
 	clion, phpstorm, idea, idea-community, datagrip, pycharm, pycharm-community, rubymine
 
 Options:
-	--no-launch		Will not launch the program after installation
+	--no-launch			Will not launch the program after installation
 	--remove-downloads	Will remove all downloaded files after installation
 	--force-download	Will force redownload even if file exists on disk
 ```

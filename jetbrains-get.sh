@@ -100,7 +100,7 @@ function download {
 	
 	if [ ! -f $dest ] || [ $forceDownload -eq 1 ]; then
 		echo "$name:	Removing old downloads..."
-		find . -iname "$name*" -exec rm -R "{}" 2> /dev/null +
+		find . -iname "$name*" -exec rm -rf "{}" 2> /dev/null +
 		echo "$name:	Downloading $source ..."
 		wget -O $dest $source -q --show-progress
 	else
@@ -108,7 +108,7 @@ function download {
 	fi
 
 	echo "$name:	Extracting..."
-	rm -R $name 2> /dev/null
+	rm -rf $name 2> /dev/null
 	mkdir -p $name
 	if ! $(tar -xf $dest --strip=1 -C $name 2> /dev/null); then
 		echo "$name:	Extraction failed!"
@@ -142,10 +142,10 @@ function installcmd {
 		download $dfile $result $name
 
 		echo "$name:	Removing leftovers..."
-		rm -R $json 2> /dev/null
+		rm -rf $json 2> /dev/null
 
 		echo "$name:	Installing..."	
-		$($SUDO rm -R $installDest/$name 2> /dev/null)
+		$($SUDO rm -rf $installDest/$name 2> /dev/null)
 		$($SUDO mv $name $installDest)
 		$($SUDO chmod -R o+rw $installDest/$name)
 		$($SUDO chown -R root:root $installDest/$name)
@@ -162,7 +162,7 @@ function installcmd {
 			echo "$name:	Launching..."
 			echo "$name:	Don't forget to create a desktop entry in 'Configure' -> 'Create Desktop Entry'!"
 			logFile=$temp/$name'Install.log'
-			rm $logFile 2> /dev/null
+			rm -rf $logFile 2> /dev/null
 			$($installDest/$name/bin/$name.sh > $logFile 2>&1)
 
 			if [ -s $logFile ]; then
@@ -191,7 +191,7 @@ function removecmd {
 		
 		if [ -d "$name" ]; then
 			echo "$name:	Removing..."
-			$($SUDO rm -R $name 2> /dev/null)
+			$($SUDO rm -rf $name 2> /dev/null)
 		else
 			echo "$name:	Package is not installed."
 		fi
@@ -219,7 +219,7 @@ else
 fi
 
 if [ $removeDownloads -eq 1 ]; then
-	rm -R $temp 2> /dev/null #always
+	rm -rf $temp 2> /dev/null #always
 	echo "All downloads removed."
 else
 	rmdir $temp 2> /dev/null #only if empty

@@ -27,6 +27,13 @@ Options:
 	--force-download	Will force redownload even if file exists on disk
 ```
 
+## Requirements
+- `bash`
+- `coreutils`
+- `findutils`
+- `wget`
+- `sudo`
+
 ## Global installation for all users
 1. Clone the repository
 2. Call `sh install-globally.sh`

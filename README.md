@@ -28,9 +28,6 @@ Options:
 ```
 
 ## Global installation for all users
-```
-git clone https://github.com/kogli/jetbrains-linux-installer.git && cd jetbrains-linux-installer && sh install-globally.sh
-```
 1. Clone the repository
 2. Call `sh install-globally.sh`
 3. You might be asked to input your root password

@@ -31,9 +31,11 @@ Options:
 ```
 git clone https://github.com/kogli/jetbrains-linux-installer.git && cd jetbrains-linux-installer && sh install-globally.sh
 ```
-- You might be asked to input your root password
-- `jetbrains-get` gets installed into your `/usr/local/bin` directory
-- Test if it works: `jetbrains-get --help`
+1. Clone the repository
+2. Call `sh install-globally.sh`
+3. You might be asked to input your root password
+4. `jetbrains-get` gets installed into your `/usr/local/bin` directory
+5. Test if it works: `jetbrains-get --help`
 
 ## Quick use
 1. Download the `jetbrains-get.sh` file

@@ -1,5 +1,5 @@
 # jetbrains-linux-installer
-`apt-get` like alternative for linux users that allows downloading JetBrains programs such as **IntelliJ IDEA, PhpStorm, WebStorm or PyCharm**
+`apt-get` like alternative for linux users that allows downloading and installing JetBrains programs such as **IntelliJ IDEA, PhpStorm, WebStorm or PyCharm**
 simply from your command-line.
 
 - **Downloads and Installs** the newest version automatically (installs into `/opt` directory)

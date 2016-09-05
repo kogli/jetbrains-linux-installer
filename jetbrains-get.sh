@@ -19,11 +19,11 @@ function askSudo {
 
 function helpcmd {
 	echo "Usage:
-	./jetbrains-get.sh install [packages] [options]	Installs/upgrades packages
-	./jetbrains-get.sh upgrade [packages] [options]	Installs/upgrades packages
-	./jetbrains-get.sh remove [packages]		Uninstalls packages
-	./jetbrains-get.sh clean			Removes all downloaded files
-	./jetbrains-get.sh --help			Prints this help message and quits
+	jetbrains-get install [packages] [options]	Installs/upgrades packages
+	jetbrains-get upgrade [packages] [options]	Installs/upgrades packages
+	jetbrains-get remove [packages]			Uninstalls packages
+	jetbrains-get clean				Removes all downloaded files
+	jetbrains-get --help				Prints this help message and quits
 
 Packages:
 	clion, phpstorm, idea, idea-community, datagrip, pycharm, pycharm-community, rubymine

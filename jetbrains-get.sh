@@ -179,7 +179,7 @@ function removecmd {
 	checkPackages
 	askSudo
 
-	if [ ! -d $temp ]; then
+	if [ ! -d $installDest ]; then
 		echo "No packages installed."
 		echo "Done!"
 		exit 1
